@@ -12,16 +12,20 @@ import java.util.List;
 
 /**
  * Created by user on 2016/2/19.
+ * <></>
  */
 public class MenuAdapter extends BaseAdapter {
+
     private Context mContext;
     private List<MenuItem> mDatas;
     private LayoutInflater mInflater;
-    public MenuAdapter(Context context , List<MenuItem> datas){
+
+    public MenuAdapter(Context context, List<MenuItem> datas) {
         mContext = context;
         mInflater = LayoutInflater.from(context);
         mDatas = datas;
     }
+
     @Override
     public int getCount() {
         return mDatas.size();
@@ -40,13 +44,13 @@ public class MenuAdapter extends BaseAdapter {
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
         ViewHolder viewHolder = null;
-        if (convertView == null){
-            convertView = mInflater.inflate(R.layout.left_menu_item,parent,false);
+        if (convertView == null) {
+            convertView = mInflater.inflate(R.layout.left_menu_item, parent, false);
             viewHolder = new ViewHolder();
             viewHolder.mImageView = (ImageView) convertView.findViewById(R.id.menu_imageview);
             viewHolder.mTextView = (TextView) convertView.findViewById(R.id.menu_textview);
             convertView.setTag(viewHolder);
-        }else{
+        } else {
             viewHolder = (ViewHolder) convertView.getTag();
         }
         MenuItem menuItem = mDatas.get(position);
@@ -54,7 +58,8 @@ public class MenuAdapter extends BaseAdapter {
         viewHolder.mTextView.setText(menuItem.getName());
         return convertView;
     }
-    private static class ViewHolder{
+
+    private static class ViewHolder {
         ImageView mImageView;
         TextView mTextView;
     }

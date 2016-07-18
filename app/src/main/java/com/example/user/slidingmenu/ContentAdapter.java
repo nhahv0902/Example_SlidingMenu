@@ -12,8 +12,10 @@ import java.util.List;
 
 /**
  * Created by user on 2016/2/19.
+ * <></>
  */
 public class ContentAdapter extends BaseAdapter {
+
     private Context mContext;
     private List<ContentItem> mDatas;
     private LayoutInflater mInflater;

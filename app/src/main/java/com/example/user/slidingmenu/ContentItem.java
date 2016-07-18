@@ -2,11 +2,13 @@ package com.example.user.slidingmenu;
 
 /**
  * Created by user on 2016/2/19.
+ * <></>
  */
 public class ContentItem {
     private int resId;
     private String name;
-    public ContentItem(){
+
+    public ContentItem() {
 
     }
 
